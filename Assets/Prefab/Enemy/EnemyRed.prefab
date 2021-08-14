@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4440793491940048475}
   - component: {fileID: 130093783152458527}
   - component: {fileID: 1384343374426548176}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tentacle 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4334683057530018490}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TargetDir
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8614878595356316547}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WiggleDir
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 9130667862262030737}
   - component: {fileID: 9130667862262030736}
   - component: {fileID: 9130667862262030739}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 9130667862801257111}
   - component: {fileID: 9130667862801257108}
   - component: {fileID: 9130667862801257109}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyRed
   m_TagString: RedEnemy
   m_Icon: {fileID: 0}
@@ -376,6 +376,10 @@ MonoBehaviour:
   deathEffect: {fileID: 8979790395932775397, guid: 8d425f4e30d8c8e4b9c286bd7ffd0de0, type: 3}
   moveSpeed: 2.5
   health: 150
+  shouldShoot: 0
+  bullet: {fileID: 0}
+  firePoint: {fileID: 0}
+  fireRate: 0.2
 --- !u!61 &9130667862801257108
 BoxCollider2D:
   m_ObjectHideFlags: 0
