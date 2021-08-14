@@ -39,6 +39,13 @@ public class PlayerController : MonoBehaviour
 	[HideInInspector] public bool canMove = true;
 	private readonly string enemyTag = "Enemy";
 
+	[Space]
+	[Header("Shoot:")]
+	[SerializeField] private GameObject bulletToFire;
+	private Transform firePoint;
+	[SerializeField] private float timeBetweenShots = 0.2f;
+	private float shotCounter;
+
 	#region Awake & Start
 	private void Awake()
 	{
@@ -46,6 +53,7 @@ public class PlayerController : MonoBehaviour
 		animator = GetComponentInChildren<Animator>();
 		gunArm = transform.Find("Gun Hand");
 		bodySR = GetComponentInChildren<SpriteRenderer>();
+		firePoint = transform.Find("Gun Hand").Find("PistolPoint");
 
 		instance = this;
 	}
@@ -65,6 +73,7 @@ public class PlayerController : MonoBehaviour
 		Dash();
 		Animate();
 		Aim();
+		Shoot();
 	}
 	#endregion
 
@@ -148,6 +157,29 @@ public class PlayerController : MonoBehaviour
 		else
 		{
 			gunArm.localScale = Vector3.one;
+		}
+	}
+	#endregion
+
+	#region Shoot
+	void Shoot()
+	{
+		if (Input.GetMouseButtonDown(0))
+		{
+			Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
+			shotCounter = timeBetweenShots;
+		}
+
+		if (Input.GetMouseButton(0))
+		{
+			shotCounter -= Time.deltaTime;
+
+			if(shotCounter <= 0)
+			{
+				Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
+
+				shotCounter = timeBetweenShots;
+			}
 		}
 	}
 	#endregion
