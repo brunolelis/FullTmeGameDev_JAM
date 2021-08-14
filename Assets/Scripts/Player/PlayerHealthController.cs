@@ -17,6 +17,10 @@ public class PlayerHealthController : MonoBehaviour
 	private void Start()
 	{
 		currentHealth = maxHealth;
+
+		UIController.instance.healthSlider.maxValue = maxHealth;
+		UIController.instance.healthSlider.value = currentHealth;
+		UIController.instance.healthText.text = currentHealth.ToString();
 	}
 
 	public void DamagePlayer()
@@ -27,5 +31,8 @@ public class PlayerHealthController : MonoBehaviour
 		{
 			PlayerController.instance.gameObject.SetActive(false);
 		}
+
+		UIController.instance.healthSlider.value = currentHealth;
+		UIController.instance.healthText.text = currentHealth.ToString();
 	}
 }
