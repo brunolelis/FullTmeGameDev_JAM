@@ -103,6 +103,16 @@ public class PlayerController : MonoBehaviour
 	#region Dash
 	private void Dash()
 	{
+		if (Input.GetKeyDown(KeyCode.Space) && dashCoolCounter <= 0 && dashCounter <= 0)
+		{
+			MOVEMENT_BASE_SPEED = dashSpeed;
+			dashCounter = dashLenght;
+
+			animator.SetTrigger("DashTrigger");
+
+			PlayerHealthController.instance.MakeInvincible(dashinvincibility);
+		}
+
 		if (dashCounter > 0)
 		{
 			dashCounter -= Time.deltaTime;
@@ -117,19 +127,6 @@ public class PlayerController : MonoBehaviour
 		if (dashCoolCounter > 0)
 		{
 			dashCoolCounter -= Time.deltaTime;
-		}
-	}
-
-	public void PressDash()
-	{
-		if (dashCoolCounter <= 0 && dashCounter <= 0)
-		{
-			MOVEMENT_BASE_SPEED = dashSpeed;
-			dashCounter = dashLenght;
-
-			animator.SetTrigger("DashTrigger");
-
-			//PlayerHealthController.instance.MakeInvincible(dashinvincibility);
 		}
 	}
 	#endregion

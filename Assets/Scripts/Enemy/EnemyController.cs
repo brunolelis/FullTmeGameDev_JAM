@@ -22,30 +22,40 @@ public class EnemyController : MonoBehaviour
 	[SerializeField] private float fireRate = 0.2f;
 	private float fireCounter;
 
+	private SpriteRenderer theBody;
+
 	private void Awake()
 	{
 		theRB = GetComponent<Rigidbody2D>();
 		anim = GetComponentInChildren<Animator>();
+		theBody = GetComponentInChildren<SpriteRenderer>();
 	}
 
 	private void Update()
 	{
-		moveDirection = PlayerController.instance.transform.position - transform.position;
-		moveDirection.Normalize();
-
-		theRB.velocity = moveDirection * moveSpeed;
-
-		RotateTowards(PlayerController.instance.transform.position);
-
-		if (shouldShoot)
+		if (theBody.isVisible && PlayerController.instance.gameObject.activeInHierarchy)
 		{
-			fireCounter -= Time.deltaTime;
+			moveDirection = PlayerController.instance.transform.position - transform.position;
+			moveDirection.Normalize();
 
-			if (fireCounter <= 0)
+			theRB.velocity = moveDirection * moveSpeed;
+
+			RotateTowards(PlayerController.instance.transform.position);
+
+			if (shouldShoot)
 			{
-				fireCounter = fireRate;
-				Instantiate(bullet, firePoint.position, firePoint.rotation);
+				fireCounter -= Time.deltaTime;
+
+				if (fireCounter <= 0)
+				{
+					fireCounter = fireRate;
+					Instantiate(bullet, firePoint.position, firePoint.rotation);
+				}
 			}
+		}
+		else
+		{
+			theRB.velocity = Vector2.zero;
 		}
 	}
 
