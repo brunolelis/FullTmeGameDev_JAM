@@ -3754,7 +3754,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (your money will be saved)
+  m_text: (all your progress will be saved)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
   m_sharedMaterial: {fileID: -3638437860269268188, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
@@ -5529,7 +5529,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <rainb>Each weapon can kill the enemy of its color
+  m_text: Each weapon can kill the enemy of its color
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
   m_sharedMaterial: {fileID: -3638437860269268188, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}

@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: FullTmeGameDev_JAM
+  companyName: LelisCompay
+  productName: Just a Ball
   defaultCursor: {fileID: 2800000, guid: a766965419331da41bba46218bf7961d, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.4, g: 0, b: 1, a: 1}

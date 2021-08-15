@@ -37,7 +37,7 @@ public class EnemyController : MonoBehaviour
 
 	private void Start()
 	{
-		enemyValue = Random.Range(1, 5);
+		enemyValue = Random.Range(4, 9);
 	}
 
 	private void Update()

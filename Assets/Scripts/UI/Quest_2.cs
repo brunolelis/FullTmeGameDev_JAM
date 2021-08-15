@@ -47,7 +47,7 @@ public class Quest_2 : MonoBehaviour
 	{
 		if (currentQuest == 1)
 		{
-			Menu.instance.GetCoins(400);
+			Menu.instance.GetCoins(350);
 			activeTip.SetActive(true);
 
 			currentQuest++;

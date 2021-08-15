@@ -617,7 +617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletToFire: {fileID: 223162257574354262, guid: 3f7ad6c568a90b34698fe660f0bab73f, type: 3}
-  timeBetweenShots: 0.8
+  timeBetweenShots: 0.75
   soundToPlay: 15
   gunUI: {fileID: 21300000, guid: 94b29900d9b776a46881a9dca43c65f7, type: 3}
   layoutColor: {r: 0.8, g: 0, b: 0, a: 0.69803923}
