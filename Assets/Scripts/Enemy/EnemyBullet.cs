@@ -7,6 +7,8 @@ public class EnemyBullet : MonoBehaviour
 	[SerializeField] private float speed;
 	private Vector3 direction;
 
+	public GameObject impactEffect;
+
 	private void Start()
 	{
 		direction = PlayerController.instance.transform.position - transform.position;
@@ -23,6 +25,7 @@ public class EnemyBullet : MonoBehaviour
 		if(collision.tag == "Player")
 		{
 			PlayerHealthController.instance.DamagePlayer();
+			Instantiate(impactEffect, transform.position, transform.rotation);
 		}
 
 		Destroy(gameObject);

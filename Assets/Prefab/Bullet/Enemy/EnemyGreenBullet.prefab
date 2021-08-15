@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0, g: 0.6, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.5019608, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  impactEffect: {fileID: 7840355994131533342, guid: 7644d60f7f8288f43b9eb2764985bdba, type: 3}
 --- !u!58 &735963504546744598
 CircleCollider2D:
   m_ObjectHideFlags: 0

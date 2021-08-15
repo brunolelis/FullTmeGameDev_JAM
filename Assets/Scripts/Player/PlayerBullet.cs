@@ -10,6 +10,9 @@ public class PlayerBullet : MonoBehaviour
 
 	public GameObject impactEffect;
 
+	public enum BulletColor { Yellow, Red, Green}
+	public BulletColor type;
+
 	private void Awake()
 	{
 		theRB = GetComponent<Rigidbody2D>();
@@ -27,10 +30,17 @@ public class PlayerBullet : MonoBehaviour
 
 		AudioManager.instance.PlaySFX(4);
 
-		if (collision.tag == "RedEnemy")
+		if (type == BulletColor.Red && collision.tag == "RedEnemy")
 		{
 			collision.GetComponent<EnemyController>().DamageEnemy(damageToGive);
-
+		}
+		else if (type == BulletColor.Green && collision.tag == "GreenEnemy")
+		{
+			collision.GetComponent<EnemyController>().DamageEnemy(damageToGive);
+		}
+		else if (type == BulletColor.Yellow && collision.tag == "YellowEnemy")
+		{
+			collision.GetComponent<EnemyController>().DamageEnemy(damageToGive);
 		}
 	}
 

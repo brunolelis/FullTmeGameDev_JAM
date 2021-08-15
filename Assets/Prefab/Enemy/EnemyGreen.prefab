@@ -595,7 +595,7 @@ GameObject:
   - component: {fileID: 1793622199655969259}
   m_Layer: 8
   m_Name: EnemyGreen
-  m_TagString: RedEnemy
+  m_TagString: GreenEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -628,16 +628,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beeb3237c64739d41bcec1af2d67c8c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 7840355994131533342, guid: 1016d6561a1832546b39b4ec55236292, type: 3}
-  deathEffect: {fileID: 8979790395932775397, guid: 8d425f4e30d8c8e4b9c286bd7ffd0de0, type: 3}
+  hitEffect: {fileID: 7840355994131533342, guid: 726998910236eb14592457f5acb3b3ac, type: 3}
+  deathEffect: {fileID: 8979790395932775397, guid: 3f433e8872bbf754483ae013509b13f7, type: 3}
   moveSpeed: 2.5
-  health: 150
+  health: 100
   shouldChasePlayer: 0
   shouldShoot: 1
   runAwayRange: 7
   bullet: {fileID: 735963504546744597, guid: 0fa14b6ad7b43f246a558eccaa81692c, type: 3}
   firePoint: {fileID: 6633323509240127204}
   fireRate: 1
+  healthBar: {fileID: 0}
 --- !u!61 &9130667862801257108
 BoxCollider2D:
   m_ObjectHideFlags: 0
