@@ -377,7 +377,9 @@ MonoBehaviour:
   deathEffect: {fileID: 8979790395932775397, guid: 8d425f4e30d8c8e4b9c286bd7ffd0de0, type: 3}
   moveSpeed: 2.5
   health: 150
+  shouldChasePlayer: 1
   shouldShoot: 0
+  runAwayRange: 0
   bullet: {fileID: 0}
   firePoint: {fileID: 0}
   fireRate: 0.2

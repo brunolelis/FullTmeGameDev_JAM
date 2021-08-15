@@ -11,6 +11,11 @@ public class VictoryScreen : MonoBehaviour
 
 	public string mainMenuScene;
 
+	private void Start()
+	{
+		Time.timeScale = 1f;
+	}
+
 	private void Update()
 	{
 		if(waitForAnyKey > 0)

@@ -15,7 +15,9 @@ public class EnemyController : MonoBehaviour
 
 	public int health = 150;
 
+	[SerializeField] private bool shouldChasePlayer;
 	[SerializeField] private bool shouldShoot;
+	[SerializeField] private float runAwayRange;
 
 	[SerializeField] private GameObject bullet;
 	[SerializeField] private Transform firePoint;
@@ -35,12 +37,12 @@ public class EnemyController : MonoBehaviour
 	{
 		if (theBody.isVisible && PlayerController.instance.gameObject.activeInHierarchy)
 		{
-			moveDirection = PlayerController.instance.transform.position - transform.position;
-			moveDirection.Normalize();
+			moveDirection = Vector2.zero;
 
-			theRB.velocity = moveDirection * moveSpeed;
-
-			RotateTowards(PlayerController.instance.transform.position);
+			if (shouldChasePlayer)
+			{
+				moveDirection = PlayerController.instance.transform.position - transform.position;
+			}
 
 			if (shouldShoot)
 			{
@@ -52,7 +54,22 @@ public class EnemyController : MonoBehaviour
 					Instantiate(bullet, firePoint.position, firePoint.rotation);
 					AudioManager.instance.PlaySFX(17);
 				}
+
+				if(Vector2.Distance(transform.position, PlayerController.instance.transform.position) > runAwayRange)
+				{
+					moveDirection = PlayerController.instance.transform.position - transform.position;
+				}
+				else
+				{
+					moveDirection = transform.position - PlayerController.instance.transform.position;
+				}
+
 			}
+
+			RotateTowards(PlayerController.instance.transform.position);
+
+			moveDirection.Normalize();
+			theRB.velocity = moveDirection * moveSpeed;
 		}
 		else
 		{
@@ -84,5 +101,14 @@ public class EnemyController : MonoBehaviour
 		direction.Normalize();
 		float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 		transform.rotation = Quaternion.Euler(Vector3.forward * (angle + offset));
+	}
+
+	private void OnDrawGizmosSelected()
+	{
+		if (shouldShoot)
+		{
+			Gizmos.color = Color.red;
+			Gizmos.DrawWireSphere(transform.position, runAwayRange);
+		}
 	}
 }
