@@ -16,9 +16,17 @@ public class VictoryScreen : MonoBehaviour
 		if(waitForAnyKey > 0)
 		{
 			waitForAnyKey -= Time.deltaTime;
+
 			if(waitForAnyKey <= 0)
 			{
 				anyKeyText.SetActive(true);
+			}
+		}
+		else
+		{
+			if (Input.anyKey)
+			{
+				SceneManager.LoadScene(mainMenuScene);
 			}
 		}
 	}
