@@ -11,6 +11,11 @@ public class Gun : MonoBehaviour
 	[SerializeField] private float timeBetweenShots = 0.2f;
 	private float shotCounter;
 
+	[SerializeField] private int soundToPlay;
+
+	public Sprite gunUI;
+	public Color layoutColor;
+
 	private void Awake()
 	{
 		firePoint = transform.Find("PistolPoint");
@@ -36,7 +41,7 @@ public class Gun : MonoBehaviour
 			{
 				Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
 				shotCounter = timeBetweenShots;
-				AudioManager.instance.PlaySFX(14);
+				AudioManager.instance.PlaySFX(soundToPlay);
 			}
 		}
 	}

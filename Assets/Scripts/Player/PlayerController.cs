@@ -39,6 +39,12 @@ public class PlayerController : MonoBehaviour
 	[HideInInspector] public bool canMove = true;
 	private readonly string enemyTag = "Enemy";
 
+	[Space]
+	[Header("Guns:")]
+	public List<Gun> availableGuns = new List<Gun>();
+	private int currentGun;
+
+
 	#region Awake & Start
 	private void Awake()
 	{
@@ -55,6 +61,9 @@ public class PlayerController : MonoBehaviour
 		theCam = Camera.main;
 
 		movement_base_speed_start = MOVEMENT_BASE_SPEED;
+
+		UIController.instance.currentGun.sprite = availableGuns[currentGun].gunUI;
+		UIController.instance.gunColorLayout.color = availableGuns[currentGun].layoutColor;
 	}
 	#endregion
 
@@ -67,6 +76,7 @@ public class PlayerController : MonoBehaviour
 			Dash();
 			Animate();
 			Aim();
+			UpdateWeapons();
 		}
 	}
 	#endregion
@@ -151,6 +161,42 @@ public class PlayerController : MonoBehaviour
 		{
 			gunArm.localScale = Vector3.one;
 		}
+	}
+	#endregion
+
+	#region SwitchWeapons
+	private void UpdateWeapons()
+	{
+		if (Input.GetKeyDown(KeyCode.E))
+		{
+			if (availableGuns.Count > 0)
+			{
+				currentGun++;
+				if (currentGun >= availableGuns.Count)
+				{
+					currentGun = 0;
+				}
+
+				SwitchGun();
+			}
+			else
+			{
+
+			}
+		}
+	}
+
+	public void SwitchGun()
+	{
+		foreach(Gun theGun in availableGuns)
+		{
+			theGun.gameObject.SetActive(false);
+		}
+
+		availableGuns[currentGun].gameObject.SetActive(true);
+
+		UIController.instance.currentGun.sprite = availableGuns[currentGun].gunUI;
+		UIController.instance.gunColorLayout.color = availableGuns[currentGun].layoutColor;
 	}
 	#endregion
 }

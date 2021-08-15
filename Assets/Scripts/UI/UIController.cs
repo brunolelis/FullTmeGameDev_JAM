@@ -22,6 +22,10 @@ public class UIController : MonoBehaviour
 
 	public string newGameScene, mainMenuScene;
 
+	public Image currentGun;
+	public Image gunColorLayout;
+	public TextMeshProUGUI coinDisplay;
+
 	private void Awake()
 	{
 		instance = this;
