@@ -35,7 +35,7 @@ public class Quest_2 : MonoBehaviour
 
 	public void BuyQuest()
 	{
-		if (questValue > Menu.instance.currentCoins)
+		if (questValue > Menu.instance.currentCoins || currentQuest > 0)
 			return;
 
 		Menu.instance.SpendCoins(questValue);
