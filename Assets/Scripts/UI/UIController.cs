@@ -102,12 +102,14 @@ public class UIController : MonoBehaviour
 
 	public void NewGame()
 	{
+		StartFadeToBlack();
 		Time.timeScale = 1f;
 		SceneManager.LoadScene(newGameScene);
 	}
 
 	public void ReturnToMenu()
 	{
+		StartFadeToBlack();
 		Time.timeScale = 1f;
 		SceneManager.LoadScene(mainMenuScene);
 	}
