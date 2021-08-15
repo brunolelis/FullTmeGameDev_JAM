@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Quest_3 : MonoBehaviour
 {
@@ -26,6 +27,10 @@ public class Quest_3 : MonoBehaviour
 		{
 			blur.SetActive(false);
 		}
+		else
+		{
+			blur.SetActive(true);
+		}
 	}
 
 	public void BuyQuest()
@@ -36,5 +41,13 @@ public class Quest_3 : MonoBehaviour
 		Menu.instance.SpendCoins(questValue);
 		currentQuest++;
 		PlayerPrefs.SetInt("Quest_3", currentQuest);
+	}
+
+	public void ConfirmQuest3()
+	{
+		if (currentQuest > 0)
+		{
+			SceneManager.LoadScene(2);
+		}
 	}
 }

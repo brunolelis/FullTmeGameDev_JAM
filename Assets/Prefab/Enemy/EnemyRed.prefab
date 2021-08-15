@@ -375,7 +375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 7840355994131533342, guid: 1016d6561a1832546b39b4ec55236292, type: 3}
   deathEffect: {fileID: 8979790395932775397, guid: 8d425f4e30d8c8e4b9c286bd7ffd0de0, type: 3}
-  moveSpeed: 3.5
+  moveSpeed: 4
   health: 150
   shouldChasePlayer: 1
   shouldShoot: 0
@@ -383,7 +383,6 @@ MonoBehaviour:
   bullet: {fileID: 0}
   firePoint: {fileID: 0}
   fireRate: 0.2
-  healthBar: {fileID: 0}
 --- !u!61 &9130667862801257108
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -443,3 +442,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39227dc2341127e40af7d2d5e6304a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  impactEffect: {fileID: 7840355994131533342, guid: 7644d60f7f8288f43b9eb2764985bdba, type: 3}

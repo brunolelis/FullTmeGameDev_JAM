@@ -8,6 +8,7 @@ public class Quest_2 : MonoBehaviour
 	public int currentQuest;
 
 	public GameObject blur;
+	public GameObject activeTip;
 
 	private void Awake()
 	{
@@ -26,6 +27,10 @@ public class Quest_2 : MonoBehaviour
 		{
 			blur.SetActive(false);
 		}
+		else
+		{
+			blur.SetActive(true);
+		}
 	}
 
 	public void BuyQuest()
@@ -36,5 +41,17 @@ public class Quest_2 : MonoBehaviour
 		Menu.instance.SpendCoins(questValue);
 		currentQuest++;
 		PlayerPrefs.SetInt("Quest_2", currentQuest);
+	}
+
+	public void ConfirmQuest2()
+	{
+		if (currentQuest == 1)
+		{
+			Menu.instance.GetCoins(400);
+			activeTip.SetActive(true);
+
+			currentQuest++;
+			PlayerPrefs.SetInt("Quest_2", currentQuest);
+		}
 	}
 }

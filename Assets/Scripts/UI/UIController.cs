@@ -22,9 +22,10 @@ public class UIController : MonoBehaviour
 
 	public string newGameScene, mainMenuScene;
 
+	public TextMeshProUGUI coinDisplay;
+
 	public Image currentGun;
 	public Image gunColorLayout;
-	public TextMeshProUGUI coinDisplay;
 
 	private void Awake()
 	{
@@ -77,6 +78,9 @@ public class UIController : MonoBehaviour
 	{
 		if (!isPaused)
 		{
+			AudioManager.instance.PlaySFX(21);
+			AudioManager.instance.LowerLevelMusic();
+
 			pauseMenu.SetActive(true);
 
 			isPaused = true;
@@ -85,6 +89,9 @@ public class UIController : MonoBehaviour
 		}
 		else
 		{
+			AudioManager.instance.PlaySFX(22);
+			AudioManager.instance.NormalLevelMusic();
+
 			pauseMenu.SetActive(false);
 
 			isPaused = false;

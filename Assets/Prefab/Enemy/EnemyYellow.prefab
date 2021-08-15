@@ -83,22 +83,22 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.135204
-        value: 0.7531643
-        inSlope: 0
-        outSlope: 0
+        time: 0
+        value: 1
+        inSlope: 0.7046086
+        outSlope: 0.7046086
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.33333334
+        outWeight: 0.22660773
       - serializedVersion: 3
-        time: 1
-        value: 0.30379474
-        inSlope: 0.73452365
-        outSlope: 0.73452365
+        time: 0.8288269
+        value: 0.29009235
+        inSlope: -0.8190999
+        outSlope: -0.8190999
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.17049125
+        inWeight: 0.1563911
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -383,7 +383,6 @@ MonoBehaviour:
   bullet: {fileID: 0}
   firePoint: {fileID: 0}
   fireRate: 0.2
-  healthBar: {fileID: 0}
 --- !u!61 &9130667862801257108
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -443,3 +442,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39227dc2341127e40af7d2d5e6304a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  impactEffect: {fileID: 7840355994131533342, guid: 7644d60f7f8288f43b9eb2764985bdba, type: 3}

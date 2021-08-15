@@ -26,7 +26,6 @@ public class PlayerBullet : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		Instantiate(impactEffect, transform.position, transform.rotation);
-		Destroy(gameObject);
 
 		AudioManager.instance.PlaySFX(4);
 
@@ -41,6 +40,24 @@ public class PlayerBullet : MonoBehaviour
 		else if (type == BulletColor.Yellow && collision.tag == "YellowEnemy")
 		{
 			collision.GetComponent<EnemyController>().DamageEnemy(damageToGive);
+		}
+
+		if(type == BulletColor.Red && (collision.tag == "GreenEnemy" || collision.tag == "YellowEnemy"))
+		{
+			Destroy(gameObject);
+		}
+		else if (type == BulletColor.Green && (collision.tag == "RedEnemy" || collision.tag == "YellowEnemy"))
+		{
+			Destroy(gameObject);
+		}
+		else if (type == BulletColor.Yellow && (collision.tag == "GreenEnemy" || collision.tag == "RedEnemy"))
+		{
+			Destroy(gameObject);
+		}
+
+		if (type == BulletColor.Yellow || type == BulletColor.Green)
+		{
+			Destroy(gameObject);
 		}
 	}
 

@@ -34,4 +34,14 @@ public class AudioManager : MonoBehaviour
 		sfx[sfxToPlay].Stop();
 		sfx[sfxToPlay].Play();
 	}
+
+	public void LowerLevelMusic()
+	{
+		levelMusic.volume = 0.2f;
+	}
+
+	public void NormalLevelMusic()
+	{
+		levelMusic.volume = 0.5f;
+	}
 }

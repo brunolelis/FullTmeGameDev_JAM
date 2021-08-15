@@ -167,7 +167,7 @@ public class PlayerController : MonoBehaviour
 	#region SwitchWeapons
 	private void UpdateWeapons()
 	{
-		if (Input.GetKeyDown(KeyCode.E))
+		if (Input.GetMouseButtonDown(1))
 		{
 			if (availableGuns.Count > 0)
 			{
@@ -178,10 +178,6 @@ public class PlayerController : MonoBehaviour
 				}
 
 				SwitchGun();
-			}
-			else
-			{
-
 			}
 		}
 	}

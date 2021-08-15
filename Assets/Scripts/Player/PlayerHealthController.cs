@@ -14,6 +14,8 @@ public class PlayerHealthController : MonoBehaviour
 
 	public int currentCoins;
 
+	public GameObject impactEffect;
+
 	private void Awake()
 	{
 		instance = this;
@@ -57,6 +59,8 @@ public class PlayerHealthController : MonoBehaviour
 			ScreenShakeController.instance.StartShake(.05f, .1f);
 
 			AudioManager.instance.PlaySFX(11);
+
+			Instantiate(impactEffect, PlayerController.instance.transform.position, PlayerController.instance.transform.rotation);
 
 			invincCount = damageInvincLenght;
 

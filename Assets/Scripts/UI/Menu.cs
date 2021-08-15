@@ -37,6 +37,14 @@ public class Menu : MonoBehaviour
 		Application.Quit();
 	}
 
+	public void GetCoins(int amount)
+	{
+		currentCoins += amount;
+		PlayerPrefs.SetInt("Coin", currentCoins);
+
+		coinDisplay.text = currentCoins.ToString() + " $";
+	}
+
 	public void SpendCoins(int amount)
 	{
 		if (amount > currentCoins)
