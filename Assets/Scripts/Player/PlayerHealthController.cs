@@ -12,9 +12,26 @@ public class PlayerHealthController : MonoBehaviour
 	public float damageInvincLenght = 1f;
 	private float invincCount;
 
+	public int currentCoins;
+
 	private void Awake()
 	{
 		instance = this;
+
+		currentCoins += 0;
+		currentCoins = PlayerPrefs.GetInt("Coin");
+	}
+
+	private void Start()
+	{
+		currentHealth = maxHealth;
+
+		currentCoins = PlayerPrefs.GetInt("Coin");
+		UIController.instance.coinDisplay.text = currentCoins.ToString() + " $";
+
+		UIController.instance.healthSlider.maxValue = maxHealth;
+		UIController.instance.healthSlider.value = currentHealth;
+		UIController.instance.healthText.text = currentHealth.ToString();
 	}
 
 	private void Update()
@@ -30,20 +47,14 @@ public class PlayerHealthController : MonoBehaviour
 		}
 	}
 
-	private void Start()
-	{
-		currentHealth = maxHealth;
-
-		UIController.instance.healthSlider.maxValue = maxHealth;
-		UIController.instance.healthSlider.value = currentHealth;
-		UIController.instance.healthText.text = currentHealth.ToString();
-	}
 
 	public void DamagePlayer()
 	{
 		if(invincCount <= 0)
 		{
 			currentHealth--;
+
+			ScreenShakeController.instance.StartShake(.05f, .1f);
 
 			AudioManager.instance.PlaySFX(11);
 
@@ -70,5 +81,13 @@ public class PlayerHealthController : MonoBehaviour
 	{
 		invincCount = lenght;
 		PlayerController.instance.bodySR.color = new Color(PlayerController.instance.bodySR.color.r, PlayerController.instance.bodySR.color.g, PlayerController.instance.bodySR.color.b, 0.5f);
+	}
+
+	public void GetCoins(int amount)
+	{
+		currentCoins += amount;
+		PlayerPrefs.SetInt("Coin", currentCoins);
+
+		UIController.instance.coinDisplay.text = currentCoins.ToString() + " $";
 	}
 }

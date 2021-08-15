@@ -26,11 +26,18 @@ public class EnemyController : MonoBehaviour
 
 	private SpriteRenderer theBody;
 
+	private int enemyValue;
+
 	private void Awake()
 	{
 		theRB = GetComponent<Rigidbody2D>();
 		anim = GetComponentInChildren<Animator>();
 		theBody = GetComponentInChildren<SpriteRenderer>();
+	}
+
+	private void Start()
+	{
+		enemyValue = Random.Range(1, 5);
 	}
 
 	private void Update()
@@ -87,7 +94,10 @@ public class EnemyController : MonoBehaviour
 
 		if (health <= 0)
 		{
+			PlayerHealthController.instance.GetCoins(enemyValue);
+
 			Instantiate(deathEffect, transform.position, transform.rotation);
+			ScreenShakeController.instance.StartShake(.05f, .1f);
 			Destroy(gameObject);
 
 			AudioManager.instance.PlaySFX(1);
