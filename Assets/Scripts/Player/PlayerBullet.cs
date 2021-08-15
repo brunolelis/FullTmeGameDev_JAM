@@ -25,8 +25,13 @@ public class PlayerBullet : MonoBehaviour
 		Instantiate(impactEffect, transform.position, transform.rotation);
 		Destroy(gameObject);
 
-		if(collision.tag == "RedEnemy")
+		AudioManager.instance.PlaySFX(4);
+
+		if (collision.tag == "RedEnemy")
+		{
 			collision.GetComponent<EnemyController>().DamageEnemy(damageToGive);
+
+		}
 	}
 
 	private void OnBecameInvisible()

@@ -368,6 +368,7 @@ GameObject:
   - component: {fileID: 9130667862801257111}
   - component: {fileID: 9130667862801257108}
   - component: {fileID: 9130667862801257109}
+  - component: {fileID: 1793622199655969259}
   m_Layer: 8
   m_Name: EnemyGreen
   m_TagString: RedEnemy
@@ -458,3 +459,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1793622199655969259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9130667862801257099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39227dc2341127e40af7d2d5e6304a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
