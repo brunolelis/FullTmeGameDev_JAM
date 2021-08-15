@@ -35,7 +35,7 @@ public class Quest_3 : MonoBehaviour
 
 	public void BuyQuest()
 	{
-		if (questValue > Menu.instance.currentCoins)
+		if (questValue > Menu.instance.currentCoins || currentQuest > 0)
 			return;
 
 		Menu.instance.SpendCoins(questValue);
@@ -45,7 +45,7 @@ public class Quest_3 : MonoBehaviour
 
 	public void ConfirmQuest3()
 	{
-		if (currentQuest > 0)
+		if (currentQuest == 1)
 		{
 			SceneManager.LoadScene(2);
 		}
