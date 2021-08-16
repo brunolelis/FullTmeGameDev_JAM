@@ -480,7 +480,7 @@ MonoBehaviour:
   hitEffect: {fileID: 7840355994131533342, guid: 1016d6561a1832546b39b4ec55236292, type: 3}
   deathEffect: {fileID: 8979790395932775397, guid: 8d425f4e30d8c8e4b9c286bd7ffd0de0, type: 3}
   moveSpeed: 4.5
-  health: 150
+  health: 100
   shouldChasePlayer: 1
   shouldShoot: 0
   runAwayRange: 0

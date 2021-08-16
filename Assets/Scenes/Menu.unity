@@ -3339,7 +3339,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 500 $
+  m_text: 3000 $
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
   m_sharedMaterial: {fileID: -3638437860269268188, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
@@ -7793,7 +7793,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100 $
+  m_text: 150 $
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
   m_sharedMaterial: {fileID: -3638437860269268188, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
@@ -7927,7 +7927,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 250 $
+  m_text: 500 $
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
   m_sharedMaterial: {fileID: -3638437860269268188, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
@@ -11377,7 +11377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1596334274b9cb249ae4dc1707942cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questValue: 250
+  questValue: 500
   currentQuest: 0
   blur: {fileID: 1451030903}
   activeTip: {fileID: 720038217}
@@ -11572,7 +11572,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I gave you a little more money but you'll have to play a little more
+  m_text: It's not as easy as it sounds! I think that's what you're thinking... you'll
+    only be able to win if you take the last tip.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
   m_sharedMaterial: {fileID: -3638437860269268188, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
@@ -11599,15 +11600,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 125
-  m_fontSizeBase: 125
+  m_fontSize: 110
+  m_fontSizeBase: 110
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -12643,7 +12644,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LOL
+  m_text: 'To help a little bit, I gave your money back!
+
+    LOL'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
   m_sharedMaterial: {fileID: -3638437860269268188, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
@@ -12670,8 +12673,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 125
-  m_fontSizeBase: 125
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12880,7 +12883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93688db49f99be5469a7ad8b4ca94504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questValue: 500
+  questValue: 3000
   currentQuest: 0
   blur: {fileID: 145054593}
 --- !u!1 &1582236657
@@ -13076,6 +13079,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music: {fileID: 24100000, guid: b608596b201505645bba340146b8e663, type: 2}
   sfx: {fileID: 24100000, guid: b0323f074d2cbcc488646487d3f00799, type: 2}
+  musicSlider: {fileID: 1937656975}
+  sfxSlider: {fileID: 1610085224}
+  type: 1
 --- !u!1 &1617549093
 GameObject:
   m_ObjectHideFlags: 0
@@ -15114,7 +15120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d083deb912c6e443a7bfa38cece83f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questValue: 100
+  questValue: 150
   currentQuest: 0
   blur: {fileID: 580446781}
 --- !u!1 &1867844120
@@ -15727,6 +15733,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music: {fileID: 24100000, guid: b608596b201505645bba340146b8e663, type: 2}
   sfx: {fileID: 24100000, guid: b0323f074d2cbcc488646487d3f00799, type: 2}
+  musicSlider: {fileID: 1937656975}
+  sfxSlider: {fileID: 1610085224}
+  type: 0
 --- !u!1 &1946899820
 GameObject:
   m_ObjectHideFlags: 0

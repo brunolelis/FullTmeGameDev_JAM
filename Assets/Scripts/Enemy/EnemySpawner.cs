@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-	[SerializeField] private float spawnRadius = 7, time = 1.5f;
+	[SerializeField] private float spawnRadius = 7, time = 1.5f, lowerTimer = 0.005f;
 
 	public GameObject[] enemies;
 
@@ -19,6 +19,10 @@ public class EnemySpawner : MonoBehaviour
 		spawnPos += Random.insideUnitCircle.normalized * spawnRadius;
 
 		Instantiate(enemies[Random.Range(0, enemies.Length)], spawnPos, Quaternion.identity);
+
+		if(time > 0.3f)
+			time -= lowerTimer;
+
 		yield return new WaitForSeconds(time);
 
 		StartCoroutine(SpawnEnemy());
