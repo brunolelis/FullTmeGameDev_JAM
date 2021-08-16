@@ -734,7 +734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 7840355994131533342, guid: 726998910236eb14592457f5acb3b3ac, type: 3}
   deathEffect: {fileID: 8979790395932775397, guid: 3f433e8872bbf754483ae013509b13f7, type: 3}
-  moveSpeed: 2.5
+  moveSpeed: 3
   health: 100
   shouldChasePlayer: 0
   shouldShoot: 1

@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Win the game if you...
+  m_text: To win the game you must...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
   m_sharedMaterial: {fileID: -3638437860269268188, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
@@ -207,8 +207,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -702,7 +702,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play a little bit more...
+  m_text: Not by this hint ! LOL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
   m_sharedMaterial: {fileID: -3638437860269268188, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
@@ -4440,7 +4440,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Unlock this quest for:'
+  m_text: 'Unlock this hint for:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
   m_sharedMaterial: {fileID: -3638437860269268188, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
@@ -4693,7 +4693,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <purple><bounce>Use Space for Dash and avoid Damage
+  m_text: <purple><bounce>Use Space for Dash
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
   m_sharedMaterial: {fileID: -3638437860269268188, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
@@ -8236,7 +8236,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Unlock this quest for:'
+  m_text: 'Unlock this hint for:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
   m_sharedMaterial: {fileID: -3638437860269268188, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
@@ -8370,7 +8370,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Unlock this quest for:'
+  m_text: 'Unlock this hint for:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
   m_sharedMaterial: {fileID: -3638437860269268188, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
@@ -11438,7 +11438,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Win the game if you...
+  m_text: To win the game you must...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
   m_sharedMaterial: {fileID: -3638437860269268188, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
@@ -11465,8 +11465,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12473,7 +12473,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Win the game if you...
+  m_text: To win the game you must...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
   m_sharedMaterial: {fileID: -3638437860269268188, guid: 3260b66b65251554ebe53aa391eb6e64, type: 2}
@@ -12500,8 +12500,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
