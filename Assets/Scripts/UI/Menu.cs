@@ -98,4 +98,13 @@ public class Menu : MonoBehaviour
 
 		coinDisplay.text = currentCoins.ToString() + " $";
 	}
+
+	public void DeletePlayerPefs()
+	{
+		PlayerPrefs.DeleteKey("Coin");
+		PlayerPrefs.DeleteKey("Quest_1");
+		PlayerPrefs.DeleteKey("Quest_2");
+		PlayerPrefs.DeleteKey("Quest_3");
+		SceneManager.LoadScene(0);
+	}
 }
