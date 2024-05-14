@@ -3,3 +3,5 @@
 
 Just a ball trying to survive in a cruel galaxy!
 Complete missions, shoot enemies and feel the adrenaline of fighting the balls!
+
+Play Here: https://bruno-lelis.itch.io/just-a-ball
